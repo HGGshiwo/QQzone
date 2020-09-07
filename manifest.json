@@ -1,0 +1,26 @@
+{
+    "manifest_version": 2,
+    "name": "QQ空间点赞",
+    "version": "1.0.0",
+    "description": "简单的Chrome扩展demo",
+    "icons":
+    {
+        "16": "img/icon.png",
+        "48": "img/icon.png",
+        "128": "img/icon.png"
+    },
+    "browser_action": 
+    {
+        "default_icon": "img/icon.png",
+        "default_title": "test"
+    },
+    
+    "content_scripts":
+    [ 
+        {
+            "matches": ["https://user.qzone.qq.com/*"],
+            "js": ["click.js"],
+            "run_at": "document_end"
+        }
+    ]
+}
